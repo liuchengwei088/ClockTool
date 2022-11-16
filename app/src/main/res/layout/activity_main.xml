@@ -211,7 +211,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="已进入打卡范围：大连市中央达到34号中心场站"
+            android:text="已进入打卡范围"
             android:textColor="#a6000000"
             android:textSize="14sp"
             />
