@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff5f5f5"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ff2b6bfe">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow_left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="考勤"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_calendar"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="考勤记录"
+                android:textColor="#d9000000"
+                android:textSize="15sp"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/date_month"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022-03"
+                android:textColor="#a6000000"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_calendar1">
+
+            <GridView
+                android:id="@+id/Gird1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:numColumns="7" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffe5e5e5"/>
+            <GridView
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/Grid2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="7"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_calendar1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="车号："
+                    android:textColor="#d9000000"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21175"
+                    android:textColor="#a6000000"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="司机："
+                    android:textColor="#d9000000"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="张三（19012236）"
+                    android:textColor="#a6000000"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+            <View
+                android:id="@+id/bline"
+                android:layout_marginHorizontal="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffe8e8e8"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ablock1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/apoint1"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/point"/>
+                <TextView
+                    android:id="@+id/aarrive1"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/apoint1"
+                    app:layout_constraintBottom_toBottomOf="@+id/apoint1"
+                    app:layout_constraintStart_toEndOf="@+id/apoint1"
+                    android:text="签到：2022-03-07 06:28:11"
+                    android:textColor="#d9000000"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:paddingEnd="40dp"
+                    android:id="@+id/alocation1"
+                    app:layout_constraintStart_toStartOf="@+id/aarrive1"
+                    app:layout_constraintTop_toBottomOf="@+id/aarrive1"
+                    android:drawableStart="@mipmap/location"
+                    android:layout_marginTop="6dp"
+                    android:drawablePadding="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="大连市中央大道34号中心场站"
+                    android:textColor="#73000000"
+                    android:textSize="14sp"
+                    />
+
+                <View
+                    android:id="@+id/aline"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#ffe5e5e5"
+                    app:layout_constraintBottom_toTopOf="@id/apoint2"
+                    app:layout_constraintEnd_toEndOf="@id/apoint1"
+                    app:layout_constraintStart_toStartOf="@+id/apoint1"
+                    app:layout_constraintTop_toBottomOf="@id/apoint1"
+                    app:layout_constraintVertical_bias="0.727" />
+
+                <ImageView
+                    android:id="@+id/apoint2"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="@id/apoint1"
+                    app:layout_constraintTop_toBottomOf="@+id/alocation1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/point"/>
+                <TextView
+                    android:id="@+id/aarrive2"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/apoint2"
+                    app:layout_constraintBottom_toBottomOf="@+id/apoint2"
+                    app:layout_constraintStart_toEndOf="@+id/apoint2"
+                    android:text="签到：2022-03-07 06:28:11"
+                    android:textColor="#d9000000"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:paddingEnd="40dp"
+                    android:id="@+id/alocation2"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/aarrive2"
+                    app:layout_constraintTop_toBottomOf="@+id/aarrive2"
+                    android:drawableStart="@mipmap/location"
+                    android:layout_marginTop="6dp"
+                    android:drawablePadding="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="大连市中央大道34号中心场站"
+                    android:textColor="#73000000"
+                    android:textSize="14sp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
